@@ -79,7 +79,7 @@ public class ProductController {
         Path filePath = uploadPath.resolve(fileName);
         // Copy file to the target location (overwriting existing file with the same name)
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-        // Return the relative path (you may adjust this based on your serving strategy)
+        // Return the relative path
         return uploadDir + "/" + fileName;
     }
 }

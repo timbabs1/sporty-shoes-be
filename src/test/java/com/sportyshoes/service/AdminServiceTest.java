@@ -21,7 +21,7 @@ class AdminServiceTest {
 
     @Test
     void testLoginSuccess() throws Exception {
-        // Assumes DataLoader has created an admin with username "admin" and password "admin123"
+        // Assumes DataLoader has created an admin with username "admin" and password "test123"
         Admin admin = adminService.login("admin", "test123");
         assertNotNull(admin);
         assertEquals("admin", admin.getUsername());

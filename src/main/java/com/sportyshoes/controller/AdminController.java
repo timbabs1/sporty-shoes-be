@@ -12,7 +12,7 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
-    // Simple login endpoint (in a real app, use proper authentication mechanisms)
+    // Simple login endpoint
     @PostMapping("/login")
     public Admin login(@RequestParam String username, @RequestParam String password) throws Exception {
         return adminService.login(username, password);

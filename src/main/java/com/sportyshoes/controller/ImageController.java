@@ -25,7 +25,7 @@ public class ImageController {
     @GetMapping("/images/{filename:.+}")
     public ResponseEntity<Resource> serveImage(@PathVariable String filename) {
         try {
-            // Resolve the file path (make sure your uploadDir is relative to your application base)
+            // Resolve the file path
             Path filePath = Paths.get(uploadDir).resolve(filename).normalize();
             Resource resource = new UrlResource(filePath.toUri());
             if (!resource.exists()) {
