@@ -31,7 +31,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // Initialize an admin if none exists
         if (adminRepository.count() == 0) {
-            adminRepository.save(new Admin("admin", "admin123"));
+            adminRepository.save(new Admin("admin", "test123"));
         }
 
         // Initialize some categories and products
@@ -41,8 +41,8 @@ public class DataLoader implements CommandLineRunner {
             categoryRepository.save(running);
             categoryRepository.save(basketball);
 
-            productRepository.save(new Product("Running Shoe A", 100.0, running, "running_shoe_a.jpg"));
-            productRepository.save(new Product("Basketball Shoe B", 150.0, basketball, "basketball_shoe_b.jpg"));
+            productRepository.save(new Product("Running Shoe A", 100.0, running, "sporty-shoes-images/running_shoes.jpg"));
+            productRepository.save(new Product("Basketball Shoe B", 150.0, basketball, "sporty-shoes-images/soccer_cleats.jpg"));
         }
 
         // Initialize some users
