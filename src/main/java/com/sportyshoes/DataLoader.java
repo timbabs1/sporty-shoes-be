@@ -41,8 +41,8 @@ public class DataLoader implements CommandLineRunner {
             categoryRepository.save(running);
             categoryRepository.save(basketball);
 
-            productRepository.save(new Product("Running Shoe A", 100.0, running));
-            productRepository.save(new Product("Basketball Shoe B", 150.0, basketball));
+            productRepository.save(new Product("Running Shoe A", 100.0, running, "running_shoe_a.jpg"));
+            productRepository.save(new Product("Basketball Shoe B", 150.0, basketball, "basketball_shoe_b.jpg"));
         }
 
         // Initialize some users

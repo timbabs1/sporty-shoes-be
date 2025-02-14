@@ -36,7 +36,7 @@ class ReportControllerTest {
 
         Category category = new Category("Running");
         category.setId(1L);
-        Product product = new Product("Running Shoe A", 100.0, category);
+        Product product = new Product("Running Shoe A", 100.0, category, "running_shoe_a.jpg");
         product.setId(1L);
         User user = new User("john_doe", "john@example.com", "test123");
         user.setId(1L);

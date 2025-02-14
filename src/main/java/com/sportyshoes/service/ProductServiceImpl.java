@@ -32,6 +32,7 @@ public class ProductServiceImpl implements ProductService {
             product.setName(productDetails.getName());
             product.setPrice(productDetails.getPrice());
             product.setCategory(productDetails.getCategory());
+            product.setImageUrl(productDetails.getImageUrl());
             return productRepository.save(product);
         }
         throw new Exception("Product not found");
